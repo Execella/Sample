@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+       static int topla(int []A, int N) 
+    { 
+        if (N <= 0) 
+            return 0;
+        
+        return (topla(A, N - 1) + A[N - 1]); 
+    } 
+     static void Main(string[] args)
+        {
+            int []dizi = {10,20,25,30,40};
+
+            Console.Write(topla(dizi, dizi.Length));
+            Console.ReadLine();
+      }
+    }
+}
