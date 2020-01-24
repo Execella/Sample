@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+
+
+
+{
+    class triangle
+    {
+
+        private double x;
+        private double y;
+        private double z;
+
+         public triangle(double x, double y, double z)
+        {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+
+        }
+
+        public double alan(){
+            double s = (x + y + z) / 2;
+            return Math.Sqrt(s * (s - x) * (s - y) * (s - z)); 
+        
+
+    }
+class Program
+    {
+        static void Main(string[] args)
+        {
+            double x = 3;
+            double y = 7;
+            double z = 10;
+            triangle mytriangle1 = new triangle(x,y,z);
+   
+            Console.WriteLine("X = "+x);
+            Console.WriteLine("Y= " +y);
+            Console.WriteLine("Z= "+z);
+            Console.WriteLine("Alan = "+mytriangle1.alan());
+
+            Console.ReadLine();
+
+
+        }
+    }
+    }
+}
